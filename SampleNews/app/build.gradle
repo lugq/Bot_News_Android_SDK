@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.peter.newssdkdemo"
         minSdkVersion 16
@@ -17,11 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile(name: 'bot-news-06301455', ext: 'aar')
+    compile(name: 'bot-news-08071510', ext: 'aar')
 
     compile 'com.android.support:support-v4:25.1.0'
     compile 'com.android.support:appcompat-v7:25.1.0'
@@ -30,6 +31,10 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.lzy.net:okgo:3.0.4'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'

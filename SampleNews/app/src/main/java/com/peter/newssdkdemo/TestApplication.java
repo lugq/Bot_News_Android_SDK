@@ -57,10 +57,10 @@ public class TestApplication extends Application {
 
             @Override
             public void onComment(View view, Article article, User user) {
-                Log.i(TAG, article.toString());
                 if (!TtCloudManager.isLogin()) {
                     showDialog((Activity) view.getContext(), "是否登录", TYPE_LOGIN, null);
                 } else {
+                    Log.i(TAG, article.toString());
                     Log.i(TAG, user.toString());
                 }
             }
@@ -69,9 +69,9 @@ public class TestApplication extends Application {
 
     public void login() {
         TtCloudListener.User user = new TtCloudListener.User();
-        user.setAvatar(avatar);
+        user.setUserAvatar(avatar);
         user.setUserId(userId);
-        user.setUserNick(userNick);
+        user.setUserNickName(userNick);
         TtCloudManager.login(user);
     }
 

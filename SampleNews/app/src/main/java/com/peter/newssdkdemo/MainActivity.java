@@ -10,6 +10,9 @@ import android.support.v4.app.FragmentTransaction;
 import ai.botbrain.ttcloud.sdk.activity.TsdH5ReaderOnWvActivity;
 import ai.botbrain.ttcloud.sdk.fragment.IndexFragment;
 
+/**
+ * 在线文档地址：https://lugq.gitbooks.io/bot_news_document/content/
+ */
 public class MainActivity extends FragmentActivity {
 
     private IndexFragment mNewsIndexFragment;
@@ -27,6 +30,7 @@ public class MainActivity extends FragmentActivity {
             fragmentTransaction.add(R.id.container, mNewsIndexFragment);
             fragmentTransaction.commit();
         }
+
     }
 
     private void initSchema() {
