@@ -6,14 +6,17 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.AppCompatButton;
+import android.view.View;
 
+import ai.botbrain.ttcloud.api.TtCloudManager;
 import ai.botbrain.ttcloud.sdk.activity.TsdH5ReaderOnWvActivity;
 import ai.botbrain.ttcloud.sdk.fragment.IndexFragment;
 
 /**
  * 在线文档地址：https://lugq.gitbooks.io/bot_news_document/content/
  */
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
     private IndexFragment mNewsIndexFragment;
 
@@ -22,6 +25,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mNewsIndexFragment = new IndexFragment();
+        initView();
         initSchema();
 
         if (!mNewsIndexFragment.isAdded()) {
@@ -31,6 +35,13 @@ public class MainActivity extends FragmentActivity {
             fragmentTransaction.commit();
         }
 
+    }
+
+    private void initView() {
+        AppCompatButton btn_day = (AppCompatButton) findViewById(R.id.btn_day);
+        AppCompatButton btn_night = (AppCompatButton) findViewById(R.id.btn_night);
+        btn_day.setOnClickListener(this);
+        btn_night.setOnClickListener(this);
     }
 
     private void initSchema() {
@@ -48,5 +59,15 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.btn_day) {
+            TtCloudManager.setDayTheme();
+            return;
+        }
+        if (id == R.id.btn_night) {
+            TtCloudManager.setNightTheme();
+        }
+    }
 }
