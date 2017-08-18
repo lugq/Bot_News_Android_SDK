@@ -11,6 +11,7 @@
 
 ## Effect
 
+**[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.1/ttcloud-1.0.0.apk)**
 
 ## Usage
 
