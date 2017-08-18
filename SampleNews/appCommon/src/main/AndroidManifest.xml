@@ -10,13 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--  设置申请的 AppId 和 AppKey -->
-        <meta-data
-            android:name="TTC_APPID"
-            android:value="S4EBUTASGJ" />
-        <meta-data
-            android:name="TTC_APPKEY"
-            android:value="HGOEIWHI32IOH32" />
+        <!--  设置申请的 AppId -->
+        <meta-data android:name="TTC_APPID" android:value="S4EBUTASGJ" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

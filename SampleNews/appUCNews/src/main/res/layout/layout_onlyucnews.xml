@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.kido.ucmaindemo.widget.main.UcNewsTitleLayout
+            android:id="@+id/titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uc_news_header_title_height"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="@dimen/titlebar_icon_size"
+                android:layout_height="@dimen/titlebar_icon_size"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/icon_titlebar_book" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/titlebar_icon_size"
+                android:text="@string/uc_news"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="@dimen/titlebar_icon_size"
+                android:layout_height="@dimen/titlebar_icon_size"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/icon_titlebar_search" />
+
+        </com.kido.ucmaindemo.widget.main.UcNewsTitleLayout>
+
+        <com.kido.ucmaindemo.widget.main.UcNewsTabLayout
+            android:id="@+id/news_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uc_news_tabs_height"
+            android:background="@color/news_tablayout_bg"
+            app:layout_collapseMode="pin"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/textGray" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.kido.ucmaindemo.widget.main.UcNewsContentPager
+        android:id="@+id/news_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ImageView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uc_news_bottom_bar_height"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_bar_toutiao" />
+
+
+</android.support.design.widget.CoordinatorLayout>

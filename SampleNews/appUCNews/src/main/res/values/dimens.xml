@@ -1,0 +1,11 @@
+<resources>
+
+    <dimen name="uc_news_header_title_height">45dip</dimen>
+    <dimen name="uc_news_bottom_bar_height">45dip</dimen>
+    <dimen name="uc_news_bar_offset">-50dip</dimen>
+    <dimen name="uc_news_tabs_height">45dip</dimen>
+
+    <dimen name="titlebar_icon_size">40dip</dimen>
+
+    <dimen name="distance_trigger_to_news">50dip</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#52ace5</color>
+    <color name="colorPrimaryDark">#52ace5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryIcons">#FFFFFF</color>
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorBackground">#FFFFFF</color>
+
+    <color name="textDark">#333333</color>
+    <color name="textGray">#808080</color>
+    <color name="news_tablayout_bg">#f8f8f8</color>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kido.ucmaindemo.widget.refresh.KSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ksrl_indicator_normal_background="@color/colorPrimary"
+    app:ksrl_indicator_normal_foreground="@color/colorPrimaryIcons"
+    app:ksrl_indicator_terminal_background="@color/colorAccent"
+    app:ksrl_indicator_terminal_foreground="@color/colorPrimaryIcons"
+    app:ksrl_terminal_enable="true"
+    app:ksrl_terminal_icon="@drawable/icon_indicator_news">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Weather, Search -->
+        <com.kido.ucmaindemo.widget.main.UcNewsBarLayout
+            android:id="@+id/news_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:unbl_closing_follower="@+id/news_viewPager"
+            app:unbl_closing_footer="@+id/news_tabLayout"
+            app:unbl_closing_header="@+id/titlebar_layout"
+            app:unbl_offset_range="@dimen/uc_news_bar_offset">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/uc_weather_block" />
+
+        </com.kido.ucmaindemo.widget.main.UcNewsBarLayout>
+
+        <!-- title layout (as the header of BarLayout)  -->
+        <com.kido.ucmaindemo.widget.main.UcNewsTitleLayout
+            android:id="@+id/titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uc_news_header_title_height"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="@dimen/titlebar_icon_size"
+                android:layout_height="@dimen/titlebar_icon_size"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/icon_titlebar_book" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/titlebar_icon_size"
+                android:text="@string/uc_news"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="@dimen/titlebar_icon_size"
+                android:layout_height="@dimen/titlebar_icon_size"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/icon_titlebar_search" />
+
+        </com.kido.ucmaindemo.widget.main.UcNewsTitleLayout>
+
+        <!-- tabs (as the footer of BarLayout) -->
+        <com.kido.ucmaindemo.widget.main.UcNewsTabLayout
+            android:id="@+id/news_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uc_news_tabs_height"
+            android:background="@color/news_tablayout_bg"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/textGray" />
+
+        <!-- content pager (as the follower of BarLayout) -->
+        <com.kido.ucmaindemo.widget.main.UcNewsContentPager
+            android:id="@+id/news_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground" />
+
+        <ImageView
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uc_news_bottom_bar_height"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bottom_bar_home" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</com.kido.ucmaindemo.widget.refresh.KSwipeRefreshLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kido.ucmaindemo.widget.main.UcNewsTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/uc_news_tabs_height"
+    android:background="@color/news_tablayout_bg"
+    app:tabGravity="fill"
+    app:tabIndicatorColor="@color/colorPrimary"
+    app:tabSelectedTextColor="@color/colorPrimary"
+    app:tabTextColor="@color/textGray" />

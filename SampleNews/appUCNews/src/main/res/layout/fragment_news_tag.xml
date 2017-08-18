@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kido.ucmaindemo.widget.refresh.KSwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ksrl_indicator_normal_background="@color/colorPrimary"
+        app:ksrl_indicator_normal_foreground="@color/colorPrimaryIcons"
+        app:ksrl_indicator_terminal_background="@color/colorAccent"
+        app:ksrl_indicator_terminal_foreground="@color/colorPrimaryIcons"
+        app:ksrl_terminal_enable="true"
+        app:ksrl_terminal_icon="@drawable/icon_indicator_home">
+
+
+        <com.kido.ucmaindemo.widget.listView.NestedListView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.kido.ucmaindemo.widget.refresh.KSwipeRefreshLayout>
+</LinearLayout>

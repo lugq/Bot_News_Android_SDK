@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="KSwipeRefreshLayout">
+        <attr name="ksrl_indicator_normal_background" format="color" />
+        <attr name="ksrl_indicator_normal_foreground" format="color" />
+        <attr name="ksrl_indicator_terminal_background" format="color" />
+        <attr name="ksrl_indicator_terminal_foreground" format="color" />
+        <attr name="ksrl_terminal_enable" format="boolean" />
+        <attr name="ksrl_terminal_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="UcNewsBarLayout">
+        <attr name="unbl_offset_range" format="reference" />
+        <attr name="unbl_closing_header" format="reference" />
+        <attr name="unbl_closing_footer" format="reference" />
+        <attr name="unbl_closing_follower" format="reference" />
+    </declare-styleable>
+
+</resources>

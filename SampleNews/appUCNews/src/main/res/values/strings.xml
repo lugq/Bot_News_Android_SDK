@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UCMainDemo</string>
+    <string name="uc_news">UC头条</string>
+
+    <string name="addView_UcNews">addView的方式添加信息流</string>
+    <string name="preLayout_UcNews">预layout的方式添加信息流</string>
+
+
+    <string-array name="news_tab_titles">
+        <item>推荐</item>
+        <item>国际</item>
+        <item>视频</item>
+        <item>游戏</item>
+        <item>动漫</item>
+        <item>热点</item>
+        <item>社会</item>
+        <item>广州</item>
+    </string-array>
+
+    <string name="behavior_follower">com.kido.ucmaindemo.widget.main.behavior.BarFollowerBehavior</string>
+
+</resources>

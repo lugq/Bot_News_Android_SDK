@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kido.ucmaindemo.widget.main.UcNewsTitleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/uc_news_header_title_height"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:layout_width="@dimen/titlebar_icon_size"
+        android:layout_height="@dimen/titlebar_icon_size"
+        android:layout_gravity="left|center_vertical"
+        android:src="@drawable/icon_titlebar_book" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/titlebar_icon_size"
+        android:text="@string/uc_news"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="@dimen/titlebar_icon_size"
+        android:layout_height="@dimen/titlebar_icon_size"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/icon_titlebar_search" />
+
+</com.kido.ucmaindemo.widget.main.UcNewsTitleLayout>
