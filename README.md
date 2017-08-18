@@ -1,8 +1,20 @@
 # Bot_News_Android_SDK
 
-## 嵌入 SDK
-Android Studio
+<p align="center">
+    <a href="http://developer.android.com/index.html">
+        <img src="https://img.shields.io/badge/platform-android-green.svg">
+    </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/Maven%20Central-5.8.1-green.svg">
+    </a>
+</p>
 
+## Effect
+
+
+## Usage
+
+1.Import library
 在 project 下的 build.gradle 中添加
 ```
 allprojects {
@@ -16,12 +28,11 @@ allprojects {
 }
 ```
 
-module 下的 build.gradle 中添加依赖
 ```
 compile 'ai.botbrain.ttcloud:libraryTtc:1.0.0'
 ```
 
-## 修改 AndroidManifest.xml
+2. In AndroidManifest.xml
 ```
 <application
     .../>
@@ -29,7 +40,7 @@ compile 'ai.botbrain.ttcloud:libraryTtc:1.0.0'
 <application>
 ```
 
-## 初始化SDK
+3. In Application
 ```
 public class XXApplication extends Application {
 
@@ -40,7 +51,31 @@ public class XXApplication extends Application {
 }
 ```
 
-## 接口回调
+4. In Activity
+```
+...
+    private IndexFragment mNewsIndexFragment;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mNewsIndexFragment = new IndexFragment();
+        initView();
+        initSchema();
+
+        if (!mNewsIndexFragment.isAdded()) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.container, mNewsIndexFragment);
+            fragmentTransaction.commit();
+        }
+
+    }
+...
+```
+
+5. 回调监听
 ```
 TtCloudManager.setCallBack(new TtCloudListener() {
             @Override
