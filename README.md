@@ -104,6 +104,47 @@ TtCloudManager.setCallBack(new TtCloudListener() {
         });
 ```
 
+## ProGuard
+If you are using ProGuard you might need to add the following options:
+```
+# qq.e ad
+-keep class com.qq.e.** {
+    public protected *;
+}
+-keep class android.support.v4.app.NotificationCompat**{
+    public *;
+}
+
+# 360 ad
+-keep class com.ak.android.** {*;}
+-keep class android.support.v4.app.NotificationCompat**{
+      public *;
+}
+
+# Glide 4.0
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.AppGlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+# for DexGuard only
+-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+
+# eventBus 3.0
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
+    <init>(java.lang.Throwable);
+}
+
+```
+
+
 ## 注意事项
 嵌入 Fragment 的 Activity 需要继承 AppCompatActivity 
 
