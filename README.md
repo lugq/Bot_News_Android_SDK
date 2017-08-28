@@ -107,6 +107,13 @@ TtCloudManager.setCallBack(new TtCloudListener() {
 ## ProGuard
 If you are using ProGuard you might need to add the following options:
 ```
+# sdk
+-keep class ai.botbrain.ttcloud.sdk.model.** { *; }
+
+-keep class ai.botbrain.ttcloud.api.**{*;}
+-keep class ai.botbrain.ttcloud.sdk.callback.**{*;}
+-keep class ai.botbrain.ttcloud.sdk.fragment.IndexFragment {*; }
+
 # qq.e ad
 -keep class com.qq.e.** {
     public protected *;
@@ -142,6 +149,13 @@ If you are using ProGuard you might need to add the following options:
     <init>(java.lang.Throwable);
 }
 
+# Gson
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
 ```
 
 
