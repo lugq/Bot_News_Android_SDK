@@ -76,7 +76,7 @@
                 android:id="@+id/news_tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
-                app:tabTextAppearance="@style/tsd_tablayout"
+                app:tabTextAppearance="@style/tablayout"
                 />
 
             <!-- tabs (as the footer of BarLayout) -->

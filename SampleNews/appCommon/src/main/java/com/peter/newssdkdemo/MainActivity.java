@@ -10,8 +10,8 @@ import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 
 import ai.botbrain.ttcloud.api.TtCloudManager;
-import ai.botbrain.ttcloud.sdk.activity.TsdH5ReaderOnWvActivity;
-import ai.botbrain.ttcloud.sdk.fragment.IndexFragment;
+import ai.botbrain.ttcloud.sdk.view.activity.TsdH5ReaderOnWvActivity;
+import ai.botbrain.ttcloud.sdk.view.fragment.IndexFragment;
 
 /**
  * 在线文档地址：https://lugq.gitbooks.io/bot_news_document/content/

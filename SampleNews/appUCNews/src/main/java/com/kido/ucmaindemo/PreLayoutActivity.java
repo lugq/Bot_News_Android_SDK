@@ -9,8 +9,8 @@ import com.kido.ucmaindemo.widget.main.UcNewsBarLayout;
 import com.kido.ucmaindemo.widget.main.UcNewsTitleLayout;
 import com.kido.ucmaindemo.widget.refresh.KSwipeRefreshLayout;
 
-import ai.botbrain.ttcloud.sdk.fragment.GraphicFragment;
 import ai.botbrain.ttcloud.sdk.model.TopTitleEntity;
+import ai.botbrain.ttcloud.sdk.view.fragment.GraphicFragment;
 import ai.botbrain.ttcloud.sdk.widget.NewsContentPager;
 import ai.botbrain.ttcloud.sdk.widget.TsdTabLayout;
 

@@ -30,4 +30,7 @@
         <item name="android:textColor">@color/colorPrimaryLight</item>
     </style>
 
+    <style name="tablayout" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
