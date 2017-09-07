@@ -13,6 +13,9 @@
 
 **[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.1/ttcloud-1.0.0.apk)**
 
+<img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-182954.png" width = "320" height = "600" alt="图片名称" align=center /> <img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-183029.png" width = "320" height = "600" alt="图片名称" align=center />
+
+
 ## Usage
 
 1.Import library
@@ -30,7 +33,7 @@ allprojects {
 ```
 
 ```
-compile 'ai.botbrain.ttcloud:libraryTtc:1.0.0'
+compile 'ai.botbrain.ttcloud:libraryTtc:1.2.2'
 ```
 
 2. In AndroidManifest.xml
@@ -100,6 +103,61 @@ TtCloudManager.setCallBack(new TtCloudListener() {
             }
         });
 ```
+
+## ProGuard
+If you are using ProGuard you might need to add the following options:
+```
+# sdk
+-keep class ai.botbrain.ttcloud.sdk.model.** { *; }
+
+-keep class ai.botbrain.ttcloud.api.**{*;}
+-keep class ai.botbrain.ttcloud.sdk.callback.**{*;}
+-keep class ai.botbrain.ttcloud.sdk.fragment.IndexFragment {*; }
+
+# qq.e ad
+-keep class com.qq.e.** {
+    public protected *;
+}
+-keep class android.support.v4.app.NotificationCompat**{
+    public *;
+}
+
+# 360 ad
+-keep class com.ak.android.** {*;}
+-keep class android.support.v4.app.NotificationCompat**{
+      public *;
+}
+
+# Glide 4.0
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.AppGlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+# for DexGuard only
+-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+
+# eventBus 3.0
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
+    <init>(java.lang.Throwable);
+}
+
+# Gson
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+```
+
 
 ## 注意事项
 嵌入 Fragment 的 Activity 需要继承 AppCompatActivity 
