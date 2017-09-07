@@ -33,7 +33,7 @@ allprojects {
 ```
 
 ```
-compile 'ai.botbrain.ttcloud:libraryTtc:1.2.2'
+compile 'ai.botbrain.ttcloud:libraryTtc:1.2.3'
 ```
 
 2. In AndroidManifest.xml
