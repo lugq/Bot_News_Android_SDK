@@ -1,5 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.2.3] - 2017-09-07
+### Changed
+- 解决 4.4 设备 Resources$NotFoundException；
+- 新闻详情页体验优化；
+- sdk Log 优化；
 
 ## [1.2.2] - 2017-08-31
 ### Added

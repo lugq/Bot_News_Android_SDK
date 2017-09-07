@@ -30,7 +30,6 @@ public class TestApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         TtCloudManager.init(this);
 
         TtCloudManager.setCallBack(new TtCloudListener() {

@@ -25,7 +25,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'ai.botbrain.ttcloud:libraryTtc:1.2.2'
+    compile 'ai.botbrain.ttcloud:libraryTtc:1.2.3'
 
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
