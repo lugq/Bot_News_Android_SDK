@@ -30,6 +30,11 @@ public class TestApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //TtcClient client = new TtcClient.Builder()
+        // .setLogEnable(true)
+        // .build();
+        //TtCloudManager.init(this, client);
+
         TtCloudManager.init(this);
 
         TtCloudManager.setCallBack(new TtCloudListener() {

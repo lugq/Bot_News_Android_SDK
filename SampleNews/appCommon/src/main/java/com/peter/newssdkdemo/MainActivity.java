@@ -3,9 +3,9 @@ package com.peter.newssdkdemo;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 
@@ -16,7 +16,7 @@ import ai.botbrain.ttcloud.sdk.view.fragment.IndexFragment;
 /**
  * 在线文档地址：https://lugq.gitbooks.io/bot_news_document/content/
  */
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private IndexFragment mNewsIndexFragment;
 
@@ -25,6 +25,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mNewsIndexFragment = new IndexFragment();
+
         initView();
         initSchema();
 
