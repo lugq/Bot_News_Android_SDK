@@ -17,7 +17,7 @@
 
 
 ## Usage
-
+### 集成
 1.Import library
 在 project 下的 build.gradle 中添加
 ```
@@ -102,6 +102,22 @@ TtCloudManager.setCallBack(new TtCloudListener() {
                 return false;
             }
         });
+```
+
+
+### IndexFragment 对外提供的接口
+1.隐藏滑动标签控件
+```
+void hideTabLayout();
+```
+
+2.控制 TabLayout 最多显示的标签个数
+```
+void setTabLayoutMaxItemCount(int maxCount);
+```
+3.向轮播图底部添加自定义视图
+```
+void addCustomView(View view);
 ```
 
 ## ProGuard
