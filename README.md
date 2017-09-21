@@ -11,13 +11,13 @@
 
 ## Effect
 
-**[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.1/ttcloud-1.0.0.apk)**
+**[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.5/ttcloud-1.2.5.apk)**
 
 <img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-182954.png" width = "320" height = "600" alt="图片名称" align=center /> <img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-183029.png" width = "320" height = "600" alt="图片名称" align=center />
 
 
 ## Usage
-
+### 集成
 1.Import library
 在 project 下的 build.gradle 中添加
 ```
@@ -33,7 +33,7 @@ allprojects {
 ```
 
 ```
-compile 'ai.botbrain.ttcloud:libraryTtc:1.2.3'
+compile 'ai.botbrain.ttcloud:libraryTtc:1.2.5'
 ```
 
 2. In AndroidManifest.xml
@@ -102,6 +102,22 @@ TtCloudManager.setCallBack(new TtCloudListener() {
                 return false;
             }
         });
+```
+
+
+### IndexFragment 对外提供的接口
+1.隐藏滑动标签控件
+```
+void hideTabLayout();
+```
+
+2.控制 TabLayout 最多显示的标签个数
+```
+void setTabLayoutMaxItemCount(int maxCount);
+```
+3.向轮播图底部添加自定义视图
+```
+void addCustomView(View view);
 ```
 
 ## ProGuard
