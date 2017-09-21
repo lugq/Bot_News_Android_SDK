@@ -11,7 +11,7 @@
 
 ## Effect
 
-**[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.1/ttcloud-1.0.0.apk)**
+**[ttcloud-1.0.0.apk](https://github.com/lugq/Bot_News_Android_SDK/releases/download/v1.2.5/ttcloud-1.2.5.apk)**
 
 <img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-182954.png" width = "320" height = "600" alt="图片名称" align=center /> <img src="https://raw.githubusercontent.com/lugq/Bot_News_Android_SDK/master/SampleNews/effectPicture/device-2017-08-18-183029.png" width = "320" height = "600" alt="图片名称" align=center />
 
