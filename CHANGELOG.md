@@ -1,5 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+## [1.2.5] - 2017-09-21
+### Added
+- 新增搜索功能；
+- 修复评论时候可能会产生的异常；
+
 ## [1.2.3] - 2017-09-07
 ### Changed
 - 解决 4.4 设备 Resources$NotFoundException；
