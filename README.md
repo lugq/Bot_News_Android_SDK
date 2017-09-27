@@ -33,8 +33,13 @@ allprojects {
 ```
 
 ```
+// 一般来说引用这个
 compile 'ai.botbrain.ttcloud:libraryTtc:1.2.5.3'
+
+// 剔除广告版本的
+compile 'ai.botbrain.ttcloud.green:libraryTtc:1.2.5.5'
 ```
+
 
 2. In AndroidManifest.xml
 ```
