@@ -125,6 +125,11 @@ void setTabLayoutMaxItemCount(int maxCount);
 void addCustomView(View view);
 ```
 
+4.设置 tabLayout 为 FIXED 模式
+```
+public void setTabLayout_MODE_FIXED()
+```
+
 ## ProGuard
 If you are using ProGuard you might need to add the following options:
 ```
