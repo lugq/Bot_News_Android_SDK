@@ -33,8 +33,13 @@ allprojects {
 ```
 
 ```
-compile 'ai.botbrain.ttcloud:libraryTtc:1.2.5'
+// 一般来说引用这个
+compile 'ai.botbrain.ttcloud:libraryTtc:1.2.5.3'
+
+// 剔除广告版本的
+compile 'ai.botbrain.ttcloud.green:libraryTtc:1.2.5.5'
 ```
+
 
 2. In AndroidManifest.xml
 ```
@@ -118,6 +123,11 @@ void setTabLayoutMaxItemCount(int maxCount);
 3.向轮播图底部添加自定义视图
 ```
 void addCustomView(View view);
+```
+
+4.设置 tabLayout 为 FIXED 模式
+```
+public void setTabLayout_MODE_FIXED()
 ```
 
 ## ProGuard
