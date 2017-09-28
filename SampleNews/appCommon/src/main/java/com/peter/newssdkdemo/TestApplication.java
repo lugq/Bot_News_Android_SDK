@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import ai.botbrain.ttcloud.api.TtCloudListener;
 import ai.botbrain.ttcloud.api.TtCloudManager;
+import ai.botbrain.ttcloud.api.TtcClient;
 
 /**
  * Description：
@@ -30,12 +31,13 @@ public class TestApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //TtcClient client = new TtcClient.Builder()
-        // .setLogEnable(true)
-        // .build();
-        //TtCloudManager.init(this, client);
+        TtcClient client = new TtcClient.Builder()
+                .setLogEnable(true)
+                .hideLikeView()
+                .build();
+        TtCloudManager.init(this, client);
 
-        TtCloudManager.init(this);
+        //TtCloudManager.init(this);
 
         TtCloudManager.setCallBack(new TtCloudListener() {
             @Override
@@ -49,9 +51,6 @@ public class TestApplication extends Application {
             public void onShare(View view, Article article, User user, ResultCallBack callvoidBack) {
                 Log.i(TAG, article.toString());
                 showDialog((Activity) view.getContext(), "是否分享", TYPE_SHARE, callvoidBack);
-                if (TtCloudManager.isLogin()) {
-                    Log.i(TAG, user.toString());
-                }
             }
 
             @Override
